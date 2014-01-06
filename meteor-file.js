@@ -260,7 +260,8 @@ if (Meteor.isServer) {
       var fd = fs.openSync(filepath, mode);
       fs.writeSync(fd, buffer, 0, buffer.length, this.start);
       fs.closeSync(fd);
-    }
+      return this.size-this.end;
+   }
   });
 }
 /*****************************************************************************/
