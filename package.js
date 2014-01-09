@@ -10,6 +10,7 @@ Package.on_use(function (api) {
 
   if (typeof api.export !== 'undefined') {
     api.export("MeteorFile", ["client", "server"]);
+    api.export("FileUploader", ["client"]);
   }
 });
 
