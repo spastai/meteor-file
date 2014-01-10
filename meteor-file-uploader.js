@@ -42,7 +42,7 @@ FileUploader.prototype = {
             file,
             self.method,
             self.options,
-            function (err) {
+            self.options.callback || function (err) {
               if (err) throw err;
             }
           );
